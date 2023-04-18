@@ -9,12 +9,12 @@ fetch("https://api.kanye.rest")
     var quote = document.createElement("p");
     quote.textContent = data.quote;
     document.body.appendChild(quote);
-  });
+  //});
 
   const encodedParams = new URLSearchParams();
   encodedParams.append("source_language", "en");
-  encodedParams.append("target_language", "id");
-  encodedParams.append("text", "");
+  encodedParams.append("target_language", "es");
+  encodedParams.append("text" , data.quote);
   
 
   const options = {
@@ -25,10 +25,18 @@ fetch("https://api.kanye.rest")
       'X-RapidAPI-Host': 'text-translator2.p.rapidapi.com'
     },
     body: encodedParams
-  };
+  }
   
 
   fetch('https://text-translator2.p.rapidapi.com/translate', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+	  .then(response => response.json())
+	  .then(response =>  {
+     
+
+      // Render the translated quote on the page
+      var translatedQuote = document.createElement("p");
+      translatedQuote.textContent = response.data.translatedText;
+      document.body.appendChild(translatedQuote);
+    })
+    .catch(err => console.error(err));
+});
