@@ -1,14 +1,16 @@
-let quoteButton = document.getElementById("quote-button");
-let text = document.getElementById("quote");
-
-fetch("https://api.kanye.rest")
-  .then(response => {
+  fetch("https://api.kanye.rest")
+    .then(response => {
     return response.json();
   })
   .then(data => {
-    var quote = document.createElement("p");
-    quote.textContent = data.quote;
-    document.body.appendChild(quote);
+    //var quote = document.createElement("p");
+    //quote.textContent = data.quote;
+    //document.body.appendChild(quote);
+
+    var quoteContainer1 = document.getElementById("quote-container-1");
+    quoteContainer1.innerHTML = `<p>${data.quote}</p>`;
+  
+
   //});
 
   const encodedParams = new URLSearchParams();
@@ -31,8 +33,6 @@ fetch("https://api.kanye.rest")
   fetch('https://text-translator2.p.rapidapi.com/translate', options)
 	  .then(response => response.json())
 	  .then(response =>  {
-     
-
       // Render the translated quote on the page
       var translatedQuote = document.createElement("p");
       translatedQuote.textContent = response.data.translatedText;

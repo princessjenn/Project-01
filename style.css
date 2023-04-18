@@ -5,23 +5,24 @@ body {
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
-  }
+}
 
-  header {
+header {
     padding: 40px;
     text-align: center;
     background: #13293d;
     color: #fff;
-  }
+}
 
-  h1 {
-    text-align: center;
-  }
-
-.container {
+h1 {
     text-align: center;
 }
 
+
+div {
+    display: flex;
+    justify-content: center;
+}
 
 @media screen and (max-width: 768px) {
    body
