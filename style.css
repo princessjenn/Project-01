@@ -1,0 +1,31 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+  }
+
+  header {
+    padding: 40px;
+    text-align: center;
+    background: #13293d;
+    color: #fff;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+.container {
+    text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+   body
+{
+      flex-direction: column;
+    }
+}
