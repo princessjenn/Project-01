@@ -3,10 +3,11 @@ let text = document.getElementById("quote");
 
 fetch("https://api.kanye.rest")
   .then(response => {
-  return response.json();
-
+    return response.json();
   })
   .then(data => {
-   console.log(data)
-
+    var quote = document.createElement("p");
+    quote.textContent = data.quote;
+    document.body.appendChild(quote);
   });
+
