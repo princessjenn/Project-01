@@ -12,15 +12,28 @@ header {
     text-align: center;
     background: #13293d;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
 }
+
 
 h1 {
     text-align: center;
 }
 
+#buttondiv{
+    margin-top: 200px;
+}
 
-div {
+
+#quote-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
