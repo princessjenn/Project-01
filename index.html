@@ -7,12 +7,14 @@
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <title>Document</title>
 </head>
-<header> 
-  <h1>Kanye International </h1>
 
-</header>
 <body>
-   
+  <header> 
+    
+   <h1>Kanye International </h1>
+
+   </header> 
+   <main>
     <div id="buttondiv">
       <button id ='fetchButton'>Click Me</button>
       <div id="quote-container">
@@ -25,10 +27,22 @@
     <div id="quote-container">
         <h3>Spanish</h3>
       
-        <div id="spanish">
+      <div id="spanish"></div>
+    </div> 
 
+    <div class="row toggle">
+      <div class="col">
+        <p>DARK MODE</p>
       </div>
-     
+      <label class="switch col">
+        <input type="checkbox" id="theme-switcher">
+        <span class="slider round"></span>
+      </label>
+      <div class="col">
+        <p>LIGHT MODE</p>
+      </div>
+    </div>
+  </main>
   <script src="./script.js"></script>  
 </body>
 </html>

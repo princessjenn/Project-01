@@ -4,7 +4,7 @@ document.getElementById("fetchButton").onclick = generatequote
 document.getElementById("generate").onclick = translate
 let quote;
 function generatequote() {
-  console.log ("clicked");
+  console.log("clicked");
   fetch("https://api.kanye.rest")
     .then(response => {
       return response.json();
@@ -13,16 +13,17 @@ function generatequote() {
       quote = data.quote
       console.log(quote)
       //if (language === "english") {
-        quoteEnglish.innerHTML = `<p>${quote}</p>`;
+      quoteEnglish.innerHTML = `<p>${quote}</p>`;
       //}
       //else if (language === "spanish") {
-        
-        // Translate quote into spanish
     })
 }
+
+
+// Translate quote into spanish
 function translate() {
-  
-  console.log ("clicked");
+
+  console.log("clicked");
   const encodedParams = new URLSearchParams();
   encodedParams.append("source_language", "en");
   encodedParams.append("target_language", "es");
@@ -37,18 +38,40 @@ function translate() {
     body: encodedParams
   }
   fetch('https://text-translator2.p.rapidapi.com/translate', options)
-          .then(response => response.json())
-          .then(response => {
-            
-            console.log(response.data.translatedText)
-            // Render the translated quote on the page
-            //var translatedQuote = document.createElement("p");
-            //translatedQuote.textContent = response.data.translatedText;
-            //document.body.appendChild(translatedQuote);
-            var quotespanish = document.getElementById("spanish")
-            quotespanish.innerHTML = `<p>${response.data.translatedText}</p>`
-          })
-          .catch(err => console.error(err));
-          
-  
+    .then(response => response.json())
+    .then(response => {
+
+      console.log(response.data.translatedText)
+
+      // Render the translated quote on the page
+      //var translatedQuote = document.createElement("p");
+      //translatedQuote.textContent = response.data.translatedText;
+      //document.body.appendChild(translatedQuote);
+      var quotespanish = document.getElementById("spanish")
+      quotespanish.innerHTML = `<p>${response.data.translatedText}</p>`
+    })
+    .catch(err => console.error(err));
+
+  // Translate quote into spanish
 }
+
+var themeSwitcher = document.querySelector("#theme-switcher");
+var container = document.querySelector("main");
+
+/// Set default mode to dark
+var mode = "dark";
+/// Listen for a click event on toggle switch //listeners wait until the element is acted on
+themeSwitcher.addEventListener("click", function () {
+  /// If mode is dark, apply light background // adding class of light
+  if (mode === "dark") {
+    mode = "light";
+    container.setAttribute("class", "light");
+  }
+  /// If mode is light, apply dark background // adding class of dark
+  else {
+    mode = "dark";
+    container.setAttribute("class", "dark");
+  }
+});
+       /// if they click on THIS element run This function
+
