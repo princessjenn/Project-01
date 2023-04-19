@@ -1,3 +1,5 @@
+  
+function generatequote(){
   fetch("https://api.kanye.rest")
     .then(response => {
     return response.json();
@@ -7,8 +9,8 @@
     //quote.textContent = data.quote;
     //document.body.appendChild(quote);
 
-    var quoteContainer1 = document.getElementById("quote-container-1");
-    quoteContainer1.innerHTML = `<p>${data.quote}</p>`;
+    var quoteenglish = document.getElementById("english");
+    quoteenglish.innerHTML = `<p>${data.quote}</p>`;
   
 
   //});
@@ -34,9 +36,13 @@
 	  .then(response => response.json())
 	  .then(response =>  {
       // Render the translated quote on the page
-      var translatedQuote = document.createElement("p");
-      translatedQuote.textContent = response.data.translatedText;
-      document.body.appendChild(translatedQuote);
+      //var translatedQuote = document.createElement("p");
+      //translatedQuote.textContent = response.data.translatedText;
+      //document.body.appendChild(translatedQuote);
+      var quoutespanish=document.getElementById("spanish")
+      quoutespanish.innerHTML=`<p>${response.data.translatedText}</p>`
     })
     .catch(err => console.error(err));
 });
+}
+  document.getElementById("fetchButton").onclick = generatequote
