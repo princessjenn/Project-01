@@ -21,23 +21,26 @@ function generatequote() {
     })
 }
 function translate() {
-
+  
+  console.log ("clicked");
   const encodedParams = new URLSearchParams();
-        encodedParams.append("source_language", "en");
-        encodedParams.append("target_language", "es");
-        encodedParams.append("text", quote);
-        const options = {
-          method: 'POST',
-          headers: {
-            'content-type': 'application/x-www-form-urlencoded',
-            'X-RapidAPI-Key': '594f24e57fmshfcd896d19759eb4p17bf70jsn8317974053d7',
-            'X-RapidAPI-Host': 'text-translator2.p.rapidapi.com'
-          },
-          body: encodedParams
-        }
-        fetch('https://text-translator2.p.rapidapi.com/translate', options)
+  encodedParams.append("source_language", "en");
+  encodedParams.append("target_language", "es");
+  encodedParams.append("text", quote);
+  const options = {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/x-www-form-urlencoded',
+      'X-RapidAPI-Key': '594f24e57fmshfcd896d19759eb4p17bf70jsn8317974053d7',
+      'X-RapidAPI-Host': 'text-translator2.p.rapidapi.com'
+    },
+    body: encodedParams
+  }
+  fetch('https://text-translator2.p.rapidapi.com/translate', options)
           .then(response => response.json())
           .then(response => {
+            
+            console.log(response.data.translatedText)
             // Render the translated quote on the page
             //var translatedQuote = document.createElement("p");
             //translatedQuote.textContent = response.data.translatedText;
@@ -46,5 +49,6 @@ function translate() {
             quotespanish.innerHTML = `<p>${response.data.translatedText}</p>`
           })
           .catch(err => console.error(err));
+          
   
 }
