@@ -20,11 +20,17 @@ header {
   left: 0;
 }
 
+img {
+  width: 10%;
+  height: 10%;
+  
+}
 
 h1 {
   text-align: center;
 
 }
+
 
 h3 {
   color: red;
