@@ -56,7 +56,7 @@ function translate() {
 }
 
 var themeSwitcher = document.querySelector("#theme-switcher");
-var container = document.querySelector("main");
+var container = document.querySelector("body");
 
 // Get the mode from local storage or set it to "dark" by default
 var mode = localStorage.getItem("mode") || "dark";
