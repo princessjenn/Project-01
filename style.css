@@ -1,5 +1,5 @@
 body {
-  font-family: Arial;
+  font-family: 'Bebas Neue', cursive;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -44,6 +44,7 @@ main {
   padding: 200px;
   margin: 254px;
 }
+
 
 #quote-container {
   display: flex;
@@ -107,6 +108,19 @@ main {
   -webkit-transition: .4s;
   transition: .4s;
 }
+
+
+#fetchButton {
+  color: black;
+  font-family: 'Aboreto', cursive;
+
+  }
+
+
+  #generate.btn {
+    font-family: 'Aboreto', cursive;
+    color: black;
+  }
 
 /* Rounded sliders */
 .slider.round {
