@@ -85,4 +85,20 @@ function setTheme() {
   // Set the class of the container based on the mode
   container.setAttribute("class", mode);
 }
+// Add an event listener for when the switch button is toggled
+themeSwitcher.addEventListener("change", function() {
+  // Save the state of the switch button in local storage
+  localStorage.setItem("switchState", themeSwitcher.checked);
+});
+
+// Check the saved state of the switch button on page load
+const savedSwitchState = localStorage.getItem("switchState");
+
+if (savedSwitchState === "true") {
+  // If the switch button was previously checked, set it to checked
+  themeSwitcher.checked = true;
+} else {
+  // Otherwise, set it to unchecked
+  themeSwitcher.checked = false;
+}
 
