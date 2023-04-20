@@ -58,20 +58,31 @@ function translate() {
 var themeSwitcher = document.querySelector("#theme-switcher");
 var container = document.querySelector("main");
 
-/// Set default mode to dark
-var mode = "dark";
-/// Listen for a click event on toggle switch //listeners wait until the element is acted on
+// Get the mode from local storage or set it to "dark" by default
+var mode = localStorage.getItem("mode") || "dark";
+
+// Set the initial theme based on the mode
+setTheme();
+
+// Listen for a click event on the toggle switch
 themeSwitcher.addEventListener("click", function () {
-  /// If mode is dark, apply light background // adding class of light
+  // If mode is dark, switch to light mode
   if (mode === "dark") {
     mode = "light";
-    container.setAttribute("class", "light");
   }
-  /// If mode is light, apply dark background // adding class of dark
+  // If mode is light, switch to dark mode
   else {
     mode = "dark";
-    container.setAttribute("class", "dark");
   }
+  // Store the mode in local storage
+  localStorage.setItem("mode", mode);
+  // Set the theme based on the new mode
+  setTheme();
 });
-       /// if they click on THIS element run This function
+
+// Function to set the theme based on the current mode
+function setTheme() {
+  // Set the class of the container based on the mode
+  container.setAttribute("class", mode);
+}
 
