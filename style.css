@@ -45,19 +45,11 @@ main {
   margin: 254px;
 }
 
-#buttondiv {}
-
-
-
 #quote-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
-
-
-
 
 /* theme switcher CSS Properties*/
 
@@ -115,8 +107,6 @@ main {
   -webkit-transition: .4s;
   transition: .4s;
 }
-
-
 
 /* Rounded sliders */
 .slider.round {
