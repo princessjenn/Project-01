@@ -57,6 +57,11 @@ function translate() {
 
 var themeSwitcher = document.querySelector("#theme-switcher");
 var container = document.querySelector("body");
+var modeImageContainer = document.querySelector("#mode-image-container");
+var lightModeImage = document.querySelector("#light-mode-image");
+var darkModeImage = document.querySelector("#dark-mode-image");
+
+
 
 // Get the mode from local storage or set it to "dark" by default
 var mode = localStorage.getItem("mode") || "dark";
@@ -74,6 +79,10 @@ themeSwitcher.addEventListener("click", function () {
   else {
     mode = "dark";
   }
+
+  lightModeImage.style.display = "block";
+  darkModeImage.style.display = "none";
+
   // Store the mode in local storage
   localStorage.setItem("mode", mode);
   // Set the theme based on the new mode
@@ -85,6 +94,21 @@ function setTheme() {
   // Set the class of the container based on the mode
   container.setAttribute("class", mode);
 }
+
+// Function to set the theme based on the current mode
+function setTheme() {
+  // Set the class of the container based on the mode
+  container.setAttribute("class", mode);
+  // Show or hide the appropriate image based on the mode
+  if (mode === "light") {
+    lightModeImage.style.display = "block";
+    darkModeImage.style.display = "none";
+  } else {
+    lightModeImage.style.display = "none";
+    darkModeImage.style.display = "block";
+  }
+}
+
 // Add an event listener for when the switch button is toggled
 themeSwitcher.addEventListener("change", function() {
   // Save the state of the switch button in local storage
