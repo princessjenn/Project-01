@@ -15,6 +15,8 @@
 </head>
 
 <body>
+  <img id="dark-mode-image" src="./straightface.png" alt="Night Mode/Kanye Straight Face">
+  <img id="light-mode-image" src="./happyface.png" alt="Day Mode/Kanye Smiling">
   <header>
     <h1>Kanye International </h1>
     <h3>PARENTAL ADVISORY WARNING</h3>
@@ -22,39 +24,40 @@
   </header>
   <main>
     <div id="mode-image-container">
+
       <aside class="light-image-aside">
-      <img id="light-mode-image" src= "./happyface.png" alt="Day Mode/Kanye Smiling">
       </aside>
-      <aside class= "dark-image-aside">
-      <img id="dark-mode-image" src= "./straightface.png" alt="Night Mode/Kanye Straight Face">
+
+      <aside class="dark-image-aside">
       </aside>
-     </div>
+    </div>
 
     <div id="quote-container">
       <button id="fetchButton">Click here for Kanye Quote!</button>
       <!--<div id="quote-container"> --->
-        <div id="english"></div>
-      
+      <div id="english"></div>
+
 
       <button id="generate" class="btn">Click Here to Translate to Spanish!</button>
-     <!-- <div id="quote-container"> -->
-        <div id="spanish"></div>
-      </div>
+      <!-- <div id="quote-container"> -->
+      <div id="spanish"></div>
+    </div>
 
-      <div class="row toggle">
-        <div class="col">
-          <p class="toggle-text">DAY MODE</p>
-        </div>
-        <label class="switch col">
-          <input type="checkbox" id="theme-switcher">
-          <span class="slider round"></span>
-        </label>
-        <div class="col">
-          <p class="toggle-text">NIGHT MODE</p>
-        </div>
+    <div class="row toggle">
+      <div class="col">
+        <p class="toggle-text">DAY MODE</p>
       </div>
+      <label class="switch col">
+        <input type="checkbox" id="theme-switcher">
+        <span class="slider round"></span>
+      </label>
+      <div class="col">
+        <p class="toggle-text">NIGHT MODE</p>
+      </div>
+    </div>
     </div>
   </main>
   <script src="./script.js"></script>
 </body>
+
 </html>
