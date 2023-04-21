@@ -2,67 +2,61 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <title>International Kanye</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <title>International Kanye</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-  <header> 
-    <img src="./rocket.png" alt="real rocket ye">
-   <h1>Kanye International </h1>
-   <h3>PARENTAL ADVISORY WARNING</h3>
-   <img src="./hombreye.png" alt="spanish ye bear">
+  <header>
+   <!---- <img src="./rocket.png" alt="Rocket-Ship Kayne"> ---->
+    <h1>Kanye International </h1>
+    <h3>PARENTAL ADVISORY WARNING</h3>
+    <!----<img src="./hombreye.png" alt="Kayne Bear with Sombrero">---->
 
-  </header> 
+  </header>
   <main>
-    <div class="ye">
-      <img src="./happyface.png" alt="kanye smiling">
-      <img src="./straightface.png" alt="straight face ye">
-      
-      
-      
-      
-      
-      
-      
-    </div>
+    <div id="mode-image-container">
+      <aside class="light-image-aside">
+      <img id="light-mode-image" src= "./happyface.png" alt="Day Mode/Kanye Smiling">
+      </aside>
+      <aside class= "dark-image-aside">
+      <img id="dark-mode-image" src= "./straightface.png" alt="Night Mode/Kanye Straight Face">
+      </aside>
+     </div>
 
-    <div id="buttondiv">
-      <button id ='fetchButton'>click here for Kanye quote!</button>
-      <div id="quote-container">
-        <h2>English</h2>
+    <div id="quote-container">
+      <button id="fetchButton">Click here for Kanye Quote!</button>
+      <!--<div id="quote-container"> --->
         <div id="english"></div>
-      </div>
+      
 
-      <button id='generate' class="btn">Translate</button>
-      <div id="quote-container">
-        <h2>Spanish</h2>
+      <button id="generate" class="btn">Click Here to Translate to Spanish!</button>
+     <!-- <div id="quote-container"> -->
         <div id="spanish"></div>
       </div>
 
       <div class="row toggle">
         <div class="col">
-          <p>DAY MODE</p>
+          <p class="toggle-text">DAY MODE</p>
         </div>
         <label class="switch col">
           <input type="checkbox" id="theme-switcher">
           <span class="slider round"></span>
         </label>
         <div class="col">
-          <p>NIGHT MODE</p>
+          <p class="toggle-text">NIGHT MODE</p>
         </div>
       </div>
     </div>
   </main>
   <script src="./script.js"></script>
 </body>
-
 </html>
