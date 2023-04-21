@@ -23,7 +23,7 @@ header {
 img {
   width: 10%;
   height: 10%;
-  
+
 }
 
 h1 {
@@ -114,13 +114,13 @@ main {
   color: black;
   font-family: 'Aboreto', cursive;
 
-  }
+}
 
 
-  #generate.btn {
-    font-family: 'Aboreto', cursive;
-    color: black;
-  }
+#generate.btn {
+  font-family: 'Aboreto', cursive;
+  color: black;
+}
 
 /* Rounded sliders */
 .slider.round {
