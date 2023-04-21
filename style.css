@@ -8,11 +8,17 @@ body {
 }
 
 header {
-  padding: 30px;
+  background-image: url("rocket.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+ /* height: 182.391px;
+  width: 1893px;*/
+
+  padding: 6px;
   text-align: center;
   font-size: x-large;
   background: #13293d;
-  color: #fff;
+  color: #fff; 
   margin-bottom: 20px;
   position: absolute;
   top: 0;
@@ -31,11 +37,15 @@ h3 {
 }
 
 p {
-font-size: 24px
+font-size: 40px
 }
 
+.toggle-text{
+  display: flex;
+  font-size: 24px
+}
 main {
-  display: block;
+  display: flexbox;
   text-align: center;
   padding: 70px;
   margin: 210px;
@@ -69,7 +79,7 @@ height: 20%
 .dark-image-aside {
   position: fixed;
   top: 0;
-  right: 0;
+  right:0;
   width: 20%;
   height: 100%;
   overflow: hidden;
@@ -125,6 +135,7 @@ img {
 
  #fetchButton , #generate.btn {
     border-style: inset;
+    margin: 50px;
     width: 50%;
     height:10%;
     font-family: 'Aboreto', cursive;
@@ -137,7 +148,7 @@ img {
 
 .toggle {
   border-style: outset;
-  height:100px;
+  height: 65px;
   background-color: rgba(76, 175, 80, 0.15)
 }
 
@@ -201,6 +212,7 @@ img {
 
 .row {
   margin: 120px;
+  align-items: center;
   display: flex;
 }
 
