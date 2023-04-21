@@ -40,7 +40,7 @@ p {
 font-size: 40px
 }
 
-.toggle-text{
+.toggle-text {
   display: flex;
   font-size: 24px
 }
@@ -148,7 +148,7 @@ img {
 
 .toggle {
   border-style: outset;
-  height: 65px;
+  width: 35%;
   background-color: rgba(76, 175, 80, 0.15)
 }
 
@@ -211,9 +211,10 @@ img {
 }
 
 .row {
-  margin: 120px;
+  margin: 350px;
   align-items: center;
   display: flex;
+  justify-content: space-evenly;
 }
 
 .col {
