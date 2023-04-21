@@ -8,26 +8,25 @@ body {
 }
 
 header {
-  background-image: url("rocket.png");
+  background-image: url("./hombreye.png");
   background-size: contain;
-  background-repeat: no-repeat;
- /* height: 182.391px;
-  width: 1893px;*/
-
   padding: 6px;
   text-align: center;
   font-size: x-large;
-  background: #13293d;
-  color: #fff; 
+ /* background: #13293d;
+  color: #fff; */ 
   margin-bottom: 20px;
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
+  border-bottom: double
 }
 
 h1 {
   text-align: center;
+  text-shadow: 1px 1px 2px red, 0 0 1em green, 0 0 0.2em green;
+
 
 }
 
@@ -134,11 +133,12 @@ img {
 }
 
  #fetchButton , #generate.btn {
-    border-style: inset;
+    border-style: dotted;
+    background-color: gold;
     margin: 50px;
     width: 50%;
     height:10%;
-    font-family: 'Aboreto', cursive;
+    font-family: 'Fjalla One', sans-serif;
     color: black;
     font-size: larger;
    
