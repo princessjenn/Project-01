@@ -10,9 +10,9 @@ body {
 header {
   padding: 30px;
   text-align: center;
+  font-size: x-large;
   background: #13293d;
   color: #fff;
-  justify-content: center;
   margin-bottom: 20px;
   position: absolute;
   top: 0;
@@ -20,43 +20,124 @@ header {
   left: 0;
 }
 
-img {
-  width: 10%;
-  height: 10%;
-  
-}
-
 h1 {
   text-align: center;
 
 }
-
 
 h3 {
   color: red;
 
 }
 
+p {
+font-size: 24px
+}
+
 main {
   display: block;
   text-align: center;
-
-  padding: 200px;
-  margin: 254px;
+  padding: 70px;
+  margin: 210px;
 }
 
+#mode-image-container img {
+width: 20%;
+height: 20%
+}
+
+/* Styles for the light mode image aside */
+.light-image-aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.light-image-aside img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  height: auto;
+}
+
+/* Styles for the dark mode image aside */
+.dark-image-aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.dark-image-aside img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  height: auto;
+}
+
+/* Styles for the light mode image */
+body.light #mode-image-container #light-mode-image {
+  display: block;
+  width: 85%;
+  height: auto
+}
+
+body.light #mode-image-container #dark-mode-image {
+  display: none;
+  width: 85%;
+  height: auto
+}
+
+/* Styles for the dark mode image */
+body.dark #mode-image-container #light-mode-image {
+  display: none;
+  width: 85%;
+  height: auto
+}
+
+body.dark #mode-image-container #dark-mode-image {
+  display: block;
+  width: 85%;
+  height: auto
+}
+
+
+img {
+  width: 10%;
+  height: 10%;
+  
+}
 
 #quote-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+}
+
+ #fetchButton , #generate.btn {
+    border-style: inset;
+    width: 50%;
+    height:10%;
+    font-family: 'Aboreto', cursive;
+    color: black;
+    font-size: larger;
+   
 }
 
 /* theme switcher CSS Properties*/
 
 .toggle {
   border-style: outset;
-  width: 400px;
+  height:100px;
   background-color: rgba(76, 175, 80, 0.15)
 }
 
@@ -109,19 +190,6 @@ main {
   transition: .4s;
 }
 
-
-#fetchButton {
-  color: black;
-  font-family: 'Aboreto', cursive;
-
-  }
-
-
-  #generate.btn {
-    font-family: 'Aboreto', cursive;
-    color: black;
-  }
-
 /* Rounded sliders */
 .slider.round {
   border-radius: 34px;
@@ -132,16 +200,13 @@ main {
 }
 
 .row {
-  margin: 20px;
+  margin: 120px;
   display: flex;
 }
 
 .col {
-  margin: 20px;
+  margin:20px;
 }
-
-
-
 
 /* Styling the Switch button */
 .switch {
@@ -150,10 +215,6 @@ main {
   width: 45px;
   height: 20px;
 }
-
-
-
-
 
 .slider:before {
   position: absolute;
@@ -166,12 +227,6 @@ main {
   -webkit-transition: .3s;
   transition: all .3s;
 }
-
-/*.switch input:checked + .slider::before {
- transform: translateX(20px)
-  background-color: rgb(29, 128, 210);
-
-}*/
 
 input:focus+.slider {
   box-shadow: 0 0 1px rgb(29, 128, 210);
