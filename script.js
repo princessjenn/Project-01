@@ -13,7 +13,7 @@ function generatequote() {
       quote = data.quote
       console.log(quote)
       //if (language === "english") {
-      quoteEnglish.innerHTML = `<p>${quote}</p>`;
+      quoteEnglish.innerHTML = ` <p>"${quote}" - Kanye West</p> ` 
       //}
       //else if (language === "spanish") {
     })
@@ -48,7 +48,7 @@ function translate() {
       //translatedQuote.textContent = response.data.translatedText;
       //document.body.appendChild(translatedQuote);
       var quotespanish = document.getElementById("spanish")
-      quotespanish.innerHTML = `<p>${response.data.translatedText}</p>`
+      quotespanish.innerHTML = `<p> "${response.data.translatedText}" - Kanye West</p>`
     })
     .catch(err => console.error(err));
 
