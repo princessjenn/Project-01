@@ -32,6 +32,7 @@ h1 {
 }
 
 
+
 h3 {
   color: red;
 
@@ -112,13 +113,13 @@ main {
 
 #fetchButton {
   color: black;
-  font-family: 'Aboreto', cursive;
+  font-family: 'Fjalla One', sans-serif;
 
   }
 
 
   #generate.btn {
-    font-family: 'Aboreto', cursive;
+    font-family: 'Fjalla One', sans-serif;
     color: black;
   }
 
