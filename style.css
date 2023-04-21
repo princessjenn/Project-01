@@ -51,10 +51,10 @@ main {
   margin: 210px;
 }
 
-#mode-image-container img {
+/* #mode-image-container img {
   width: 20%;
   height: 20%
-}
+} */
 
 /* Styles for the light mode image aside */
 .light-image-aside {
@@ -95,31 +95,24 @@ main {
 }
 
 /* Styles for the light mode image */
-body.light #mode-image-container #light-mode-image {
+body.light #mode-image-container {
   display: block;
   width: 85%;
   height: auto
 }
 
-body.light #mode-image-container #dark-mode-image {
+body.light #mode-image-container {
   display: none;
   width: 85%;
   height: auto
 }
 
 /* Styles for the dark mode image */
-body.dark #mode-image-container #light-mode-image {
+body.dark #mode-image-container {
   display: none;
   width: 85%;
   height: auto
 }
-
-body.dark #mode-image-container #dark-mode-image {
-  display: block;
-  width: 85%;
-  height: auto
-}
-
 
 img {
   width: 10%;
@@ -269,11 +262,40 @@ input:checked+.slider:before {
 }
 
 
+#light-mode-image {
+  position: fixed;
+  width: 300px;
+  height: auto;
+  bottom: 0%;
+  left: 0%;
+}
 
+#dark-mode-image {
+  position: fixed;
+  width: 300px;
+  height: auto;
+  bottom: 0%;
+  right: 0%;
+}
 
 @media screen and (max-width: 768px) {
+
   body {
     flex-direction: column;
+
+  }
+  #light-mode-image {
+    position: fixed;
+    width: 300px;
+    bottom: 0%;
+    left: 0%;
+  }
+
+  #dark-mode-image {
+    position: fixed;
+    width: 300px;
+    bottom: 0%;
+    right: 0%;
   }
 }
 
